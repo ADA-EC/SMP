@@ -1,12 +1,18 @@
 from tkinter import *
 from tkinter import messagebox as msgbx
-#import serial
+import serial
 
 class Application:
 	def __init__(self, master=None):
 		self.master = master
 		self.height = 428
 		self.width = 404
+		'''self.comport = serial.Serial('/dev/ttyUSB0', 115200)
+		while True:
+			print(self.comport)
+			a = self.comport.readline()
+			print(a)
+			self.MainWindow()'''
 		while True:
 			self.MainWindow()
 

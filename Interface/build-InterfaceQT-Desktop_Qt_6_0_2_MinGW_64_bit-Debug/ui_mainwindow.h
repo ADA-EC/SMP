@@ -246,7 +246,7 @@ public:
         LogoLabel->setGeometry(QRect(20, 460, 311, 91));
         LogoLabel->setMinimumSize(QSize(100, 29));
         LogoLabel->setMaximumSize(QSize(16777214, 16777215));
-        LogoLabel->setPixmap(QPixmap(QString::fromUtf8(":/Resources/Imagens/logo_ada.png")));
+        LogoLabel->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo_ada.png")));
         LogoLabel->setScaledContents(true);
         LogoLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         MainWindow->setCentralWidget(centralwidget);

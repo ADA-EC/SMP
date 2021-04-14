@@ -18,10 +18,10 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTimeEdit>
+#include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -50,29 +50,35 @@ public:
     QHBoxLayout *CalendarioLayout;
     QCalendarWidget *Calendario;
     QTimeEdit *Hora;
-    QSpacerItem *verticalSpacer;
     QVBoxLayout *SaveLayout;
     QLabel *SaveLabel;
     QHBoxLayout *OpcoesLayout;
     QPushButton *SaveButton;
     QPushButton *VoltarButton;
-    QMenuBar *menubar;
+    QLabel *LogoLabel;
     QStatusBar *statusbar;
+    QToolBar *toolBar;
+    QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(714, 612);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget_6 = new QWidget(centralwidget);
         verticalLayoutWidget_6->setObjectName(QString::fromUtf8("verticalLayoutWidget_6"));
-        verticalLayoutWidget_6->setGeometry(QRect(80, 30, 668, 461));
+        verticalLayoutWidget_6->setGeometry(QRect(20, 0, 668, 451));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_6);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setSizeConstraint(QLayout::SetMinimumSize);
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_3->setSizeConstraint(QLayout::SetFixedSize);
+        verticalLayout_3->setContentsMargins(0, 0, 0, 10);
         FrequenciaLayout = new QVBoxLayout();
         FrequenciaLayout->setObjectName(QString::fromUtf8("FrequenciaLayout"));
         FrequenciaLayout->setContentsMargins(5, 5, 5, 5);
@@ -131,6 +137,9 @@ public:
 
         FrequenciaLayout->addLayout(horizontalLayout);
 
+
+        verticalLayout_3->addLayout(FrequenciaLayout);
+
         DataeHoraLayout = new QVBoxLayout();
         DataeHoraLayout->setObjectName(QString::fromUtf8("DataeHoraLayout"));
         DataeHoraLayout->setContentsMargins(5, 5, 5, 5);
@@ -162,6 +171,11 @@ public:
         CalendarioLayout->setObjectName(QString::fromUtf8("CalendarioLayout"));
         Calendario = new QCalendarWidget(verticalLayoutWidget_6);
         Calendario->setObjectName(QString::fromUtf8("Calendario"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(Calendario->sizePolicy().hasHeightForWidth());
+        Calendario->setSizePolicy(sizePolicy1);
 
         CalendarioLayout->addWidget(Calendario);
 
@@ -176,36 +190,36 @@ public:
 
         DataeHoraLayout->addLayout(CalendarioLayout);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        DataeHoraLayout->addItem(verticalSpacer);
-
-
-        FrequenciaLayout->addLayout(DataeHoraLayout);
+        verticalLayout_3->addLayout(DataeHoraLayout);
 
         SaveLayout = new QVBoxLayout();
         SaveLayout->setObjectName(QString::fromUtf8("SaveLayout"));
+        SaveLayout->setContentsMargins(5, 5, 5, 5);
         SaveLabel = new QLabel(verticalLayoutWidget_6);
         SaveLabel->setObjectName(QString::fromUtf8("SaveLabel"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(SaveLabel->sizePolicy().hasHeightForWidth());
-        SaveLabel->setSizePolicy(sizePolicy);
+        SaveLabel->setEnabled(false);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(SaveLabel->sizePolicy().hasHeightForWidth());
+        SaveLabel->setSizePolicy(sizePolicy2);
         SaveLabel->setFont(font1);
         SaveLabel->setAlignment(Qt::AlignCenter);
 
         SaveLayout->addWidget(SaveLabel);
 
         OpcoesLayout = new QHBoxLayout();
+        OpcoesLayout->setSpacing(0);
         OpcoesLayout->setObjectName(QString::fromUtf8("OpcoesLayout"));
+        OpcoesLayout->setSizeConstraint(QLayout::SetMinimumSize);
         SaveButton = new QPushButton(verticalLayoutWidget_6);
         SaveButton->setObjectName(QString::fromUtf8("SaveButton"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(SaveButton->sizePolicy().hasHeightForWidth());
-        SaveButton->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(SaveButton->sizePolicy().hasHeightForWidth());
+        SaveButton->setSizePolicy(sizePolicy3);
         QFont font2;
         font2.setPointSize(15);
         SaveButton->setFont(font2);
@@ -214,8 +228,8 @@ public:
 
         VoltarButton = new QPushButton(verticalLayoutWidget_6);
         VoltarButton->setObjectName(QString::fromUtf8("VoltarButton"));
-        sizePolicy1.setHeightForWidth(VoltarButton->sizePolicy().hasHeightForWidth());
-        VoltarButton->setSizePolicy(sizePolicy1);
+        sizePolicy3.setHeightForWidth(VoltarButton->sizePolicy().hasHeightForWidth());
+        VoltarButton->setSizePolicy(sizePolicy3);
         VoltarButton->setFont(font2);
 
         OpcoesLayout->addWidget(VoltarButton);
@@ -224,19 +238,28 @@ public:
         SaveLayout->addLayout(OpcoesLayout);
 
 
-        FrequenciaLayout->addLayout(SaveLayout);
+        verticalLayout_3->addLayout(SaveLayout);
 
-
-        verticalLayout_3->addLayout(FrequenciaLayout);
-
+        LogoLabel = new QLabel(centralwidget);
+        LogoLabel->setObjectName(QString::fromUtf8("LogoLabel"));
+        LogoLabel->setEnabled(true);
+        LogoLabel->setGeometry(QRect(20, 460, 311, 91));
+        LogoLabel->setMinimumSize(QSize(100, 29));
+        LogoLabel->setMaximumSize(QSize(16777214, 16777215));
+        LogoLabel->setPixmap(QPixmap(QString::fromUtf8(":/Resources/Imagens/logo_ada.png")));
+        LogoLabel->setScaledContents(true);
+        LogoLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
+        toolBar = new QToolBar(MainWindow);
+        toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 714, 21));
+        MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);
 
@@ -256,6 +279,11 @@ public:
         SaveLabel->setText(QCoreApplication::translate("MainWindow", "Salvo!", nullptr));
         SaveButton->setText(QCoreApplication::translate("MainWindow", "Salvar", nullptr));
         VoltarButton->setText(QCoreApplication::translate("MainWindow", "Voltar", nullptr));
+#if QT_CONFIG(tooltip)
+        LogoLabel->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/Resources/Imagens/logo_ada.png\"/></p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        LogoLabel->setText(QString());
+        toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };

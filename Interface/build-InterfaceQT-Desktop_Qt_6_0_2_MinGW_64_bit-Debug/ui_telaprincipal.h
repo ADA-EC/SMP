@@ -28,34 +28,39 @@ class Ui_TelaPrincipal
 {
 public:
     QWidget *centralwidget;
-    QLabel *label;
-    QLabel *label_2;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton_4;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_6;
-    QWidget *verticalLayoutWidget_2;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_3;
+    QLabel *AdaLabel;
+    QWidget *verticalLayoutWidget_3;
+    QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *TituloLayout;
+    QLabel *SMPLabel;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *TituloLabel;
+    QSpacerItem *horizontalSpacer_10;
+    QSpacerItem *verticalSpacer_3;
+    QVBoxLayout *ConexaoLayout;
+    QHBoxLayout *PortaLayout;
     QSpacerItem *horizontalSpacer_7;
-    QLabel *label_3;
-    QComboBox *comboBox;
+    QLabel *PortaLabel;
+    QComboBox *PortasComboBox;
     QSpacerItem *horizontalSpacer_8;
-    QHBoxLayout *horizontalLayout_6;
-    QSpacerItem *horizontalSpacer_6;
-    QPushButton *pushButton;
-    QSpacerItem *horizontalSpacer_5;
-    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *ConectarLayout;
+    QPushButton *ConectarButton;
+    QSpacerItem *verticalSpacer_2;
+    QHBoxLayout *StatusLayout;
     QSpacerItem *horizontalSpacer_3;
-    QLabel *label_4;
-    QLabel *label_5;
+    QLabel *StatusTxtLabel;
+    QLabel *StatusLabel;
     QSpacerItem *horizontalSpacer_4;
+    QVBoxLayout *OpcoesLayout;
+    QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *BotoesLayout;
+    QPushButton *DadosButton;
+    QPushButton *ConfigButton;
+    QHBoxLayout *SairLayout;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *SairButton;
+    QSpacerItem *horizontalSpacer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -63,180 +68,222 @@ public:
     {
         if (TelaPrincipal->objectName().isEmpty())
             TelaPrincipal->setObjectName(QString::fromUtf8("TelaPrincipal"));
-        TelaPrincipal->resize(547, 600);
+        TelaPrincipal->resize(735, 667);
         centralwidget = new QWidget(TelaPrincipal);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(70, 10, 211, 181));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo.png")));
-        label->setScaledContents(true);
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(290, 30, 231, 151));
+        AdaLabel = new QLabel(centralwidget);
+        AdaLabel->setObjectName(QString::fromUtf8("AdaLabel"));
+        AdaLabel->setGeometry(QRect(20, 520, 311, 91));
+        AdaLabel->setMinimumSize(QSize(100, 29));
+        AdaLabel->setMaximumSize(QSize(311, 91));
+        AdaLabel->setStyleSheet(QString::fromUtf8(""));
+        AdaLabel->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo_ada.png")));
+        AdaLabel->setScaledContents(true);
+        verticalLayoutWidget_3 = new QWidget(centralwidget);
+        verticalLayoutWidget_3->setObjectName(QString::fromUtf8("verticalLayoutWidget_3"));
+        verticalLayoutWidget_3->setGeometry(QRect(90, 20, 531, 481));
+        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_3);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        TituloLayout = new QHBoxLayout();
+        TituloLayout->setObjectName(QString::fromUtf8("TituloLayout"));
+        SMPLabel = new QLabel(verticalLayoutWidget_3);
+        SMPLabel->setObjectName(QString::fromUtf8("SMPLabel"));
+        SMPLabel->setMaximumSize(QSize(175, 181));
+        SMPLabel->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo.png")));
+        SMPLabel->setScaledContents(true);
+
+        TituloLayout->addWidget(SMPLabel);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        TituloLayout->addItem(horizontalSpacer_9);
+
+        TituloLabel = new QLabel(verticalLayoutWidget_3);
+        TituloLabel->setObjectName(QString::fromUtf8("TituloLabel"));
         QFont font;
-        font.setPointSize(23);
-        label_2->setFont(font);
-        label_2->setMouseTracking(false);
-        label_2->setAcceptDrops(false);
-        label_2->setStyleSheet(QString::fromUtf8("color: #A22"));
-        label_2->setTextFormat(Qt::AutoText);
-        label_2->setScaledContents(false);
-        label_2->setWordWrap(true);
-        verticalLayoutWidget = new QWidget(centralwidget);
-        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(90, 350, 361, 109));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButton_2 = new QPushButton(verticalLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setFont(font);
-        pushButton_2->setStyleSheet(QString::fromUtf8("color:#A22"));
+        font.setPointSize(30);
+        font.setBold(true);
+        TituloLabel->setFont(font);
+        TituloLabel->setMouseTracking(false);
+        TituloLabel->setAcceptDrops(false);
+        TituloLabel->setStyleSheet(QString::fromUtf8("color: #A22"));
+        TituloLabel->setTextFormat(Qt::AutoText);
+        TituloLabel->setScaledContents(false);
+        TituloLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        TituloLabel->setWordWrap(true);
 
-        horizontalLayout->addWidget(pushButton_2);
+        TituloLayout->addWidget(TituloLabel);
 
-        pushButton_3 = new QPushButton(verticalLayoutWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setFont(font);
-        pushButton_3->setStyleSheet(QString::fromUtf8("color:#A22"));
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addWidget(pushButton_3);
+        TituloLayout->addItem(horizontalSpacer_10);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        verticalLayout_3->addLayout(TituloLayout);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        horizontalLayout_2->addItem(horizontalSpacer_2);
+        verticalLayout_3->addItem(verticalSpacer_3);
 
-        pushButton_4 = new QPushButton(verticalLayoutWidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        QFont font1;
-        font1.setPointSize(14);
-        pushButton_4->setFont(font1);
-        pushButton_4->setStyleSheet(QString::fromUtf8("color:#A22"));
-
-        horizontalLayout_2->addWidget(pushButton_4);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer);
-
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
-        label_6 = new QLabel(centralwidget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(10, 470, 271, 91));
-        label_6->setStyleSheet(QString::fromUtf8(""));
-        label_6->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo_ada.png")));
-        label_6->setScaledContents(true);
-        verticalLayoutWidget_2 = new QWidget(centralwidget);
-        verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(40, 210, 461, 115));
-        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        ConexaoLayout = new QVBoxLayout();
+        ConexaoLayout->setObjectName(QString::fromUtf8("ConexaoLayout"));
+        PortaLayout = new QHBoxLayout();
+        PortaLayout->setObjectName(QString::fromUtf8("PortaLayout"));
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_7);
+        PortaLayout->addItem(horizontalSpacer_7);
 
-        label_3 = new QLabel(verticalLayoutWidget_2);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setFont(font);
-        label_3->setMouseTracking(false);
-        label_3->setAcceptDrops(false);
-        label_3->setStyleSheet(QString::fromUtf8("color: #A22"));
-        label_3->setTextFormat(Qt::AutoText);
-        label_3->setScaledContents(false);
-        label_3->setWordWrap(true);
+        PortaLabel = new QLabel(verticalLayoutWidget_3);
+        PortaLabel->setObjectName(QString::fromUtf8("PortaLabel"));
+        QFont font1;
+        font1.setPointSize(25);
+        PortaLabel->setFont(font1);
+        PortaLabel->setMouseTracking(false);
+        PortaLabel->setAcceptDrops(false);
+        PortaLabel->setStyleSheet(QString::fromUtf8("color: #A22"));
+        PortaLabel->setTextFormat(Qt::AutoText);
+        PortaLabel->setScaledContents(false);
+        PortaLabel->setWordWrap(true);
 
-        horizontalLayout_3->addWidget(label_3);
+        PortaLayout->addWidget(PortaLabel);
 
-        comboBox = new QComboBox(verticalLayoutWidget_2);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        PortasComboBox = new QComboBox(verticalLayoutWidget_3);
+        PortasComboBox->setObjectName(QString::fromUtf8("PortasComboBox"));
+        PortasComboBox->setFont(font1);
 
-        horizontalLayout_3->addWidget(comboBox);
+        PortaLayout->addWidget(PortasComboBox);
 
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_8);
+        PortaLayout->addItem(horizontalSpacer_8);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_3);
+        ConexaoLayout->addLayout(PortaLayout);
 
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        horizontalLayout_6->addItem(horizontalSpacer_6);
+        ConexaoLayout->addItem(verticalSpacer);
 
-        pushButton = new QPushButton(verticalLayoutWidget_2);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QFont font2;
-        font2.setPointSize(16);
-        pushButton->setFont(font2);
-        pushButton->setStyleSheet(QString::fromUtf8("color:#A22"));
+        ConectarLayout = new QHBoxLayout();
+        ConectarLayout->setObjectName(QString::fromUtf8("ConectarLayout"));
+        ConectarLayout->setContentsMargins(150, -1, 150, -1);
+        ConectarButton = new QPushButton(verticalLayoutWidget_3);
+        ConectarButton->setObjectName(QString::fromUtf8("ConectarButton"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ConectarButton->sizePolicy().hasHeightForWidth());
+        ConectarButton->setSizePolicy(sizePolicy);
+        ConectarButton->setFont(font1);
+        ConectarButton->setStyleSheet(QString::fromUtf8("color:#A22"));
 
-        horizontalLayout_6->addWidget(pushButton);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_5);
+        ConectarLayout->addWidget(ConectarButton);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_6);
+        ConexaoLayout->addLayout(ConectarLayout);
 
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        ConexaoLayout->addItem(verticalSpacer_2);
+
+        StatusLayout = new QHBoxLayout();
+        StatusLayout->setObjectName(QString::fromUtf8("StatusLayout"));
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_4->addItem(horizontalSpacer_3);
+        StatusLayout->addItem(horizontalSpacer_3);
 
-        label_4 = new QLabel(verticalLayoutWidget_2);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        QFont font3;
-        font3.setPointSize(18);
-        label_4->setFont(font3);
-        label_4->setMouseTracking(false);
-        label_4->setAcceptDrops(false);
-        label_4->setStyleSheet(QString::fromUtf8("color: #A22"));
-        label_4->setTextFormat(Qt::AutoText);
-        label_4->setScaledContents(false);
-        label_4->setWordWrap(true);
+        StatusTxtLabel = new QLabel(verticalLayoutWidget_3);
+        StatusTxtLabel->setObjectName(QString::fromUtf8("StatusTxtLabel"));
+        StatusTxtLabel->setFont(font1);
+        StatusTxtLabel->setMouseTracking(false);
+        StatusTxtLabel->setAcceptDrops(false);
+        StatusTxtLabel->setStyleSheet(QString::fromUtf8("color: #A22"));
+        StatusTxtLabel->setTextFormat(Qt::AutoText);
+        StatusTxtLabel->setScaledContents(false);
+        StatusTxtLabel->setWordWrap(true);
 
-        horizontalLayout_4->addWidget(label_4);
+        StatusLayout->addWidget(StatusTxtLabel);
 
-        label_5 = new QLabel(verticalLayoutWidget_2);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setFont(font3);
-        label_5->setMouseTracking(false);
-        label_5->setAcceptDrops(false);
-        label_5->setStyleSheet(QString::fromUtf8("color: #3B3"));
-        label_5->setTextFormat(Qt::AutoText);
-        label_5->setScaledContents(false);
-        label_5->setWordWrap(true);
+        StatusLabel = new QLabel(verticalLayoutWidget_3);
+        StatusLabel->setObjectName(QString::fromUtf8("StatusLabel"));
+        StatusLabel->setFont(font1);
+        StatusLabel->setMouseTracking(false);
+        StatusLabel->setAcceptDrops(false);
+        StatusLabel->setStyleSheet(QString::fromUtf8("color: #3B3"));
+        StatusLabel->setTextFormat(Qt::AutoText);
+        StatusLabel->setScaledContents(false);
+        StatusLabel->setWordWrap(true);
 
-        horizontalLayout_4->addWidget(label_5);
+        StatusLayout->addWidget(StatusLabel);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_4->addItem(horizontalSpacer_4);
+        StatusLayout->addItem(horizontalSpacer_4);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_4);
+        ConexaoLayout->addLayout(StatusLayout);
+
+
+        verticalLayout_3->addLayout(ConexaoLayout);
+
+        OpcoesLayout = new QVBoxLayout();
+        OpcoesLayout->setObjectName(QString::fromUtf8("OpcoesLayout"));
+        OpcoesLayout->setContentsMargins(0, 10, 0, 0);
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        OpcoesLayout->addItem(verticalSpacer_4);
+
+        BotoesLayout = new QHBoxLayout();
+        BotoesLayout->setObjectName(QString::fromUtf8("BotoesLayout"));
+        DadosButton = new QPushButton(verticalLayoutWidget_3);
+        DadosButton->setObjectName(QString::fromUtf8("DadosButton"));
+        QFont font2;
+        font2.setPointSize(20);
+        DadosButton->setFont(font2);
+        DadosButton->setStyleSheet(QString::fromUtf8("color:#A22"));
+
+        BotoesLayout->addWidget(DadosButton);
+
+        ConfigButton = new QPushButton(verticalLayoutWidget_3);
+        ConfigButton->setObjectName(QString::fromUtf8("ConfigButton"));
+        ConfigButton->setFont(font2);
+        ConfigButton->setStyleSheet(QString::fromUtf8("color:#A22"));
+
+        BotoesLayout->addWidget(ConfigButton);
+
+
+        OpcoesLayout->addLayout(BotoesLayout);
+
+        SairLayout = new QHBoxLayout();
+        SairLayout->setObjectName(QString::fromUtf8("SairLayout"));
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        SairLayout->addItem(horizontalSpacer_2);
+
+        SairButton = new QPushButton(verticalLayoutWidget_3);
+        SairButton->setObjectName(QString::fromUtf8("SairButton"));
+        QFont font3;
+        font3.setPointSize(15);
+        SairButton->setFont(font3);
+        SairButton->setStyleSheet(QString::fromUtf8("color:#A22"));
+
+        SairLayout->addWidget(SairButton);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        SairLayout->addItem(horizontalSpacer);
+
+
+        OpcoesLayout->addLayout(SairLayout);
+
+
+        verticalLayout_3->addLayout(OpcoesLayout);
 
         TelaPrincipal->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TelaPrincipal);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 547, 21));
+        menubar->setGeometry(QRect(0, 0, 735, 21));
         TelaPrincipal->setMenuBar(menubar);
         statusbar = new QStatusBar(TelaPrincipal);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -250,16 +297,16 @@ public:
     void retranslateUi(QMainWindow *TelaPrincipal)
     {
         TelaPrincipal->setWindowTitle(QCoreApplication::translate("TelaPrincipal", "SMP", nullptr));
-        label->setText(QString());
-        label_2->setText(QCoreApplication::translate("TelaPrincipal", "Sistema de Monitoramento de Press\303\243o", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("TelaPrincipal", "Dados", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("TelaPrincipal", "Dados", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("TelaPrincipal", "Sair", nullptr));
-        label_6->setText(QString());
-        label_3->setText(QCoreApplication::translate("TelaPrincipal", "Porta:", nullptr));
-        pushButton->setText(QCoreApplication::translate("TelaPrincipal", "Conectar", nullptr));
-        label_4->setText(QCoreApplication::translate("TelaPrincipal", "Status:", nullptr));
-        label_5->setText(QCoreApplication::translate("TelaPrincipal", "conectado", nullptr));
+        AdaLabel->setText(QString());
+        SMPLabel->setText(QString());
+        TituloLabel->setText(QCoreApplication::translate("TelaPrincipal", "Sistema de Monitoramento de Press\303\243o", nullptr));
+        PortaLabel->setText(QCoreApplication::translate("TelaPrincipal", "Porta:", nullptr));
+        ConectarButton->setText(QCoreApplication::translate("TelaPrincipal", "Conectar", nullptr));
+        StatusTxtLabel->setText(QCoreApplication::translate("TelaPrincipal", "Status:", nullptr));
+        StatusLabel->setText(QCoreApplication::translate("TelaPrincipal", "Conectado!", nullptr));
+        DadosButton->setText(QCoreApplication::translate("TelaPrincipal", "Dados", nullptr));
+        ConfigButton->setText(QCoreApplication::translate("TelaPrincipal", "Configura\303\247\303\265es", nullptr));
+        SairButton->setText(QCoreApplication::translate("TelaPrincipal", "Sair", nullptr));
     } // retranslateUi
 
 };

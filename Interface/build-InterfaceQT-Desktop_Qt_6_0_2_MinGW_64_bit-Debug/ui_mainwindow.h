@@ -18,6 +18,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTimeEdit>
@@ -45,8 +46,11 @@ public:
     QVBoxLayout *DataeHoraLayout;
     QLabel *DataeHoraLabel;
     QHBoxLayout *ModoLayout;
+    QSpacerItem *horizontalSpacer_2;
     QRadioButton *ManualButton;
+    QSpacerItem *horizontalSpacer;
     QRadioButton *AutomaticoButton;
+    QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *CalendarioLayout;
     QCalendarWidget *Calendario;
     QTimeEdit *Hora;
@@ -55,7 +59,7 @@ public:
     QHBoxLayout *OpcoesLayout;
     QPushButton *SaveButton;
     QPushButton *VoltarButton;
-    QLabel *LogoLabel;
+    QLabel *AdaLabel;
     QStatusBar *statusbar;
     QToolBar *toolBar;
     QMenuBar *menubar;
@@ -64,7 +68,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(714, 612);
+        MainWindow->resize(704, 739);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -74,7 +78,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayoutWidget_6 = new QWidget(centralwidget);
         verticalLayoutWidget_6->setObjectName(QString::fromUtf8("verticalLayoutWidget_6"));
-        verticalLayoutWidget_6->setGeometry(QRect(20, 0, 668, 451));
+        verticalLayoutWidget_6->setGeometry(QRect(20, 0, 668, 532));
         verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_6);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setSizeConstraint(QLayout::SetFixedSize);
@@ -84,8 +88,17 @@ public:
         FrequenciaLayout->setContentsMargins(5, 5, 5, 5);
         FrequenciaLabel = new QLabel(verticalLayoutWidget_6);
         FrequenciaLabel->setObjectName(QString::fromUtf8("FrequenciaLabel"));
+        QPalette palette;
+        QBrush brush(QColor(170, 0, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        QBrush brush1(QColor(120, 120, 120, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        FrequenciaLabel->setPalette(palette);
         QFont font;
-        font.setPointSize(15);
+        font.setPointSize(23);
         font.setBold(true);
         FrequenciaLabel->setFont(font);
         FrequenciaLabel->setAlignment(Qt::AlignCenter);
@@ -100,8 +113,13 @@ public:
         AmostragemLayout->setContentsMargins(10, 10, 10, 10);
         AmostragemLabel = new QLabel(verticalLayoutWidget_6);
         AmostragemLabel->setObjectName(QString::fromUtf8("AmostragemLabel"));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        AmostragemLabel->setPalette(palette1);
         QFont font1;
-        font1.setPointSize(10);
+        font1.setPointSize(20);
         AmostragemLabel->setFont(font1);
         AmostragemLabel->setAlignment(Qt::AlignCenter);
 
@@ -121,6 +139,11 @@ public:
         ArmazenamentoLayout->setContentsMargins(10, 10, 10, 10);
         ArmazenamentoLabel = new QLabel(verticalLayoutWidget_6);
         ArmazenamentoLabel->setObjectName(QString::fromUtf8("ArmazenamentoLabel"));
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        ArmazenamentoLabel->setPalette(palette2);
         ArmazenamentoLabel->setFont(font1);
         ArmazenamentoLabel->setAlignment(Qt::AlignCenter);
 
@@ -145,6 +168,11 @@ public:
         DataeHoraLayout->setContentsMargins(5, 5, 5, 5);
         DataeHoraLabel = new QLabel(verticalLayoutWidget_6);
         DataeHoraLabel->setObjectName(QString::fromUtf8("DataeHoraLabel"));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        DataeHoraLabel->setPalette(palette3);
         DataeHoraLabel->setFont(font);
         DataeHoraLabel->setAlignment(Qt::AlignCenter);
 
@@ -152,17 +180,41 @@ public:
 
         ModoLayout = new QHBoxLayout();
         ModoLayout->setObjectName(QString::fromUtf8("ModoLayout"));
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ModoLayout->addItem(horizontalSpacer_2);
+
         ManualButton = new QRadioButton(verticalLayoutWidget_6);
         ManualButton->setObjectName(QString::fromUtf8("ManualButton"));
-        ManualButton->setFont(font1);
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        ManualButton->setPalette(palette4);
+        QFont font2;
+        font2.setPointSize(15);
+        ManualButton->setFont(font2);
 
         ModoLayout->addWidget(ManualButton, 0, Qt::AlignRight);
 
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ModoLayout->addItem(horizontalSpacer);
+
         AutomaticoButton = new QRadioButton(verticalLayoutWidget_6);
         AutomaticoButton->setObjectName(QString::fromUtf8("AutomaticoButton"));
-        AutomaticoButton->setFont(font1);
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        AutomaticoButton->setPalette(palette5);
+        AutomaticoButton->setFont(font2);
 
         ModoLayout->addWidget(AutomaticoButton);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ModoLayout->addItem(horizontalSpacer_3);
 
 
         DataeHoraLayout->addLayout(ModoLayout);
@@ -176,13 +228,43 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(Calendario->sizePolicy().hasHeightForWidth());
         Calendario->setSizePolicy(sizePolicy1);
+        QFont font3;
+        font3.setPointSize(10);
+        Calendario->setFont(font3);
 
         CalendarioLayout->addWidget(Calendario);
 
         Hora = new QTimeEdit(verticalLayoutWidget_6);
         Hora->setObjectName(QString::fromUtf8("Hora"));
         Hora->setMinimumSize(QSize(300, 40));
-        Hora->setFont(font1);
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette6.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+        QBrush brush2(QColor(170, 0, 0, 128));
+        brush2.setStyle(Qt::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
+#endif
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
+#endif
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+        QBrush brush3(QColor(0, 0, 0, 128));
+        brush3.setStyle(Qt::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette6.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush3);
+#endif
+        Hora->setPalette(palette6);
+        Hora->setFont(font2);
         Hora->setTime(QTime(0, 0, 0));
 
         CalendarioLayout->addWidget(Hora);
@@ -204,7 +286,12 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(SaveLabel->sizePolicy().hasHeightForWidth());
         SaveLabel->setSizePolicy(sizePolicy2);
-        SaveLabel->setFont(font1);
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        SaveLabel->setPalette(palette7);
+        SaveLabel->setFont(font2);
         SaveLabel->setAlignment(Qt::AlignCenter);
 
         SaveLayout->addWidget(SaveLabel);
@@ -220,9 +307,27 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(SaveButton->sizePolicy().hasHeightForWidth());
         SaveButton->setSizePolicy(sizePolicy3);
-        QFont font2;
-        font2.setPointSize(15);
-        SaveButton->setFont(font2);
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
+#endif
+        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
+#endif
+        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::Text, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette8.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush3);
+#endif
+        SaveButton->setPalette(palette8);
+        SaveButton->setFont(font1);
 
         OpcoesLayout->addWidget(SaveButton);
 
@@ -230,7 +335,15 @@ public:
         VoltarButton->setObjectName(QString::fromUtf8("VoltarButton"));
         sizePolicy3.setHeightForWidth(VoltarButton->sizePolicy().hasHeightForWidth());
         VoltarButton->setSizePolicy(sizePolicy3);
-        VoltarButton->setFont(font2);
+        QPalette palette9;
+        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        VoltarButton->setPalette(palette9);
+        VoltarButton->setFont(font1);
 
         OpcoesLayout->addWidget(VoltarButton);
 
@@ -240,15 +353,16 @@ public:
 
         verticalLayout_3->addLayout(SaveLayout);
 
-        LogoLabel = new QLabel(centralwidget);
-        LogoLabel->setObjectName(QString::fromUtf8("LogoLabel"));
-        LogoLabel->setEnabled(true);
-        LogoLabel->setGeometry(QRect(20, 460, 311, 91));
-        LogoLabel->setMinimumSize(QSize(100, 29));
-        LogoLabel->setMaximumSize(QSize(16777214, 16777215));
-        LogoLabel->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo_ada.png")));
-        LogoLabel->setScaledContents(true);
-        LogoLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        AdaLabel = new QLabel(centralwidget);
+        AdaLabel->setObjectName(QString::fromUtf8("AdaLabel"));
+        AdaLabel->setEnabled(true);
+        AdaLabel->setGeometry(QRect(20, 570, 311, 91));
+        AdaLabel->setMinimumSize(QSize(100, 29));
+        AdaLabel->setMaximumSize(QSize(16777214, 16777215));
+        AdaLabel->setFont(font1);
+        AdaLabel->setPixmap(QPixmap(QString::fromUtf8(":/:/Imgs/Imgs/logo_ada.png")));
+        AdaLabel->setScaledContents(true);
+        AdaLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -258,7 +372,7 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 714, 21));
+        menubar->setGeometry(QRect(0, 0, 704, 21));
         MainWindow->setMenuBar(menubar);
 
         retranslateUi(MainWindow);
@@ -280,9 +394,9 @@ public:
         SaveButton->setText(QCoreApplication::translate("MainWindow", "Salvar", nullptr));
         VoltarButton->setText(QCoreApplication::translate("MainWindow", "Voltar", nullptr));
 #if QT_CONFIG(tooltip)
-        LogoLabel->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/Resources/Imagens/logo_ada.png\"/></p></body></html>", nullptr));
+        AdaLabel->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/Resources/Imagens/logo_ada.png\"/></p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        LogoLabel->setText(QString());
+        AdaLabel->setText(QString());
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

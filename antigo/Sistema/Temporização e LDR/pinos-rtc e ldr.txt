@@ -1,0 +1,11 @@
+RTC
+	ARDUINO		RTC
+	2			SQW
+	A5			SCL
+	A4			SDA
+	GND			GND
+	5V			VCC
+LDR
+	5V         RESISTENCIA
+	RESISTENCIA	LDR		A0//mesma trilha
+	LDR			GND

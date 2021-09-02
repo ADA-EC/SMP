@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/:/Imgs">
+        <file>Imgs/logo.png</file>
+        <file>Imgs/logo_ada.png</file>
+    </qresource>
+</RCC>
